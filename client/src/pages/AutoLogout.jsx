@@ -8,7 +8,10 @@ export default function AutoLogout() {
         document.domain = settings.serverDomain;
         window.parent.postMessage({autologout: true}, "*");
         window.addEventListener("message", e => {
-            window.parent.postMessage(true, "*");
+            if (e.data.autologout) {
+                localStorage.removeItem("token");
+                window.parent.postMessage({autologoutComplete: true}, "*");
+            }
         })
     }, [])
 

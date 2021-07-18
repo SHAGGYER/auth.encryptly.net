@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e204436-48fe-4240-bedc-5028deead3c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/pages/AutoLogout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/AutoLogout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/AutoLogout.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1626604814970</updated>
-      <workItem from="1626604816300" duration="6795000" />
+      <workItem from="1626604816300" duration="6929000" />
     </task>
     <servers />
   </component>
