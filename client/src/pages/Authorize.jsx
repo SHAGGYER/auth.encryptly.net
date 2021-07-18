@@ -97,7 +97,7 @@ const Authorize = ({ location }) => {
       windowOpener.postMessage({token}, "*", );
       return;
     }
-    window.location.href = app.redirectUrl + "?token=" + token + redirectUrl;
+    window.location.href = app.redirectUrl + "?token=" + token + "&serverRedirect=true" + redirectUrl;
   };
 
   return (
