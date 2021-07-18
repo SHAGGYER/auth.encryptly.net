@@ -1,13 +1,13 @@
-import { ValidationService } from "../services/ValidationService";
+import { ValidationService } from "services/ValidationService";
 import User, { IUser } from "../models/User";
 import App from "../models/App";
 import validator from "validator";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import { MailService } from "../services/MailService";
+import { MailService } from "services/MailService";
 import path from "path";
 import fs from "fs";
-import { UserService } from "../services/UserService";
+import { UserService } from "services/UserService";
 import random from "random-number-generator";
 import { myContainer } from "rootDir/inversify.config";
 import { TYPES } from "rootDir/types.inversify";
@@ -20,7 +20,11 @@ export const init = async (_req, res) => {
     user = await User.findById(userId);
   }
 
-  return res.send({ user });
+  const settings = {
+    serverDomain: process.env.SERVER_DOMAIN
+  }
+
+  return res.send({ user, settings });
 };
 
 export const register = async (req, res) => {

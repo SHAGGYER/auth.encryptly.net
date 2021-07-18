@@ -21,6 +21,9 @@ import Account from "./pages/Account";
 import { UserService } from "./services/UserService";
 import { IApp } from "./models/IApp";
 import { IUser } from "./models/IUser";
+import AutoLogin from "src/pages/AutoLogin";
+import {ISettings} from "src/models/ISettings";
+import AutoLogout from "src/pages/AutoLogout";
 
 function App({ location }) {
   const { i18n } = useTranslation();
@@ -45,8 +48,10 @@ function App({ location }) {
     localStorage.getItem("language") || "en"
   );
   const [windowOpener] = useState(window.opener ?? null);
+  const [settings, setSettings] = useState<ISettings | undefined>(undefined)
 
   useEffect(() => {
+
     init();
   }, []);
 
@@ -74,6 +79,7 @@ function App({ location }) {
   const init = async () => {
     const { data } = await HttpClient().get("/api/auth/init");
     setUser(data.user);
+    setSettings(data.settings);
     changeLanguage(language);
     setInitiated(true);
   };
@@ -84,6 +90,7 @@ function App({ location }) {
     if (typeof response !== "string") {
       localStorage.setItem("clientId", response.clientId);
       setApp(response);
+
     } else {
       //TODO: Display error
     }
@@ -128,7 +135,8 @@ function App({ location }) {
         language,
         setLanguage,
         savedRedirectUrl,
-        windowOpener
+        windowOpener,
+        settings
       }}
     >
       <Switch>
@@ -154,6 +162,14 @@ function App({ location }) {
 
         <Route path="/auth/forgot-password">
           <ForgotPassword />
+        </Route>
+
+        <Route path="/auth/autologin">
+          <AutoLogin />
+        </Route>
+
+        <Route path="/auth/autologout">
+          <AutoLogout />
         </Route>
 
         <Route path="*">
