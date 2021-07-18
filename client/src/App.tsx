@@ -29,9 +29,11 @@ function App({ location }) {
   const {
     clientId,
     redirectUrl,
+      doLogout
   }: {
     clientId?: string;
     redirectUrl?: string;
+    doLogout?: boolean
   } = queryString.parse(location.search);
   const history = useHistory();
   const [user, setUser] = useState<IUser | undefined>(undefined);
@@ -50,6 +52,7 @@ function App({ location }) {
   const [settings, setSettings] = useState<ISettings | undefined>(undefined)
 
   useEffect(() => {
+
     init();
   }, []);
 
@@ -88,6 +91,11 @@ function App({ location }) {
     if (typeof response !== "string") {
       localStorage.setItem("clientId", response.clientId);
       setApp(response);
+
+      if (doLogout) {
+        localStorage.removeItem("token");
+        window.location.href = response.url;
+      }
     } else {
       //TODO: Display error
     }
