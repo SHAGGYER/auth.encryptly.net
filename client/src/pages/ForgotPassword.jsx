@@ -51,7 +51,7 @@ const ForgotPassword = ({ location }) => {
     try {
       const data = {
         email,
-        appName: app.name
+        appName: app ? app.name : null
       };
 
       setLoading(true);
