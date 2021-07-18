@@ -21,6 +21,7 @@ import Account from "./pages/Account";
 import { UserService } from "./services/UserService";
 import { IApp } from "./models/IApp";
 import { IUser } from "./models/IUser";
+import AutoLogin from "src/pages/AutoLogin";
 
 function App({ location }) {
   const { i18n } = useTranslation();
@@ -154,6 +155,10 @@ function App({ location }) {
 
         <Route path="/auth/forgot-password">
           <ForgotPassword />
+        </Route>
+
+        <Route path="/auth/autologin">
+          <AutoLogin />
         </Route>
 
         <Route path="*">
