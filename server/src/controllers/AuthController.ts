@@ -357,7 +357,7 @@ export const sendPasswordResetEmail = async (req, res) => {
 
   try {
     const file = fs.readFileSync(
-      path.join(__dirname, "..", "email/ForgotPassword.html")
+      path.join(__dirname, "../..", "email/ForgotPassword.html")
     );
     const html = file
       .toString()
