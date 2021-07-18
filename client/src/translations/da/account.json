@@ -1,0 +1,15 @@
+{
+  "login": "Log Ind",
+  "reject": "Afvis",
+  "app_wants_login": "vil logge dig ind",
+  "profile": "Profil",
+  "my_apps": "Mine Apps",
+  "change_password": "Skift Kodeord",
+  "new_password": "Nyt Kodeord",
+  "remove_app": "Fjern",
+  "logout": "Log Ud",
+  "save": "Gem",
+  "change_password_success": "Du har ændret dit kodeord",
+  "no_apps": "Ingen apps fundet",
+  "FIELD_REQUIRED": "Dette felt er påkrævet"
+}

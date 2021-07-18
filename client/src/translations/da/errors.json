@@ -1,0 +1,13 @@
+{
+  "FIELD_REQUIRED": "Dette felt er påkrævet",
+  "EMAIL_INCORRECT_FORMAT": "Email skal være i korrekt format",
+  "EMAIL_NOT_UNIQUE": "Denne email er allerede i brug",
+  "PASSWORD_MIN_LENGTH": "Kodeord skal være mindst 6 tegn langt",
+  "FIRST_NAME_MIN_MAX_LENGTH": "Fornavn skal være mellem 2-15 tegn langt",
+  "LAST_NAME_MIN_MAX_LENGTH": "Efternavn skal være mellem 2-20 tegn langt",
+  "DISPLAY_NAME_MIN_MAX_LENGTH": "Display navn skal være mellem 3-10 tegn langt",
+  "DISPLAY_NAME_NOT_UNIQUE": "Dette display navn er allerede i brug",
+  "INVALID_CREDENTIALS": "Kunne ikke logge dig ind",
+  "EMAIL_NOT_FOUND": "Denne email findes ikke",
+  "WRONG_CODE": "Forkert Kode"
+}

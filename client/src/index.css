@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;400;700&display=swap");
+
+:root {
+  --cta: #ffc107;
+  --red: #ff5252;
+  --dark-green: #388e3c;
+  --green: #4caf50;
+  --light-green: #8bc34a;
+  --purple: #9c27b0;
+  --blue: #2196f3;
+  --teal: #009688;
+
+  --primary: var(--red);
+
+  --st-button-primaryColor: var(--green);
+  --st-button-primaryTextColor: #ffffff;
+
+  --st-button-lightColor: var(--red);
+  --st-button-lightTextColor: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Nice Dates */
+.nice-dates {
+  position: relative !important;
+}

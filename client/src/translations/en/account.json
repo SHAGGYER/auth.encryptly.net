@@ -1,0 +1,15 @@
+{
+  "login": "Login",
+  "reject": "Reject",
+  "app_wants_login": "wants to log you in",
+  "profile": "Profile",
+  "my_apps": "My Apps",
+  "change_password": "Change Password",
+  "new_password": "New Password",
+  "remove_app": "Remove",
+  "logout": "Logout",
+  "save": "Save",
+  "change_password_success": "You have changed your password",
+  "no_apps": "No apps found",
+  "FIELD_REQUIRED": "This field is required"
+}

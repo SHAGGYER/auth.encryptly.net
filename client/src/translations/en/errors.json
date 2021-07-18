@@ -1,0 +1,13 @@
+{
+  "FIELD_REQUIRED": "This field is required",
+  "EMAIL_INCORRECT_FORMAT": "Email must be in correct format",
+  "EMAIL_NOT_UNIQUE": "This email is already in use",
+  "PASSWORD_MIN_LENGTH": "Password must be at least 6 characters long",
+  "FIRST_NAME_MIN_MAX_LENGTH": "First name must be between 2-15 characters long",
+  "LAST_NAME_MIN_MAX_LENGTH": "Last name must be between 2-20 characters long",
+  "DISPLAY_NAME_MIN_MAX_LENGTH": "Display name must be between 3-10 characters long",
+  "DISPLAY_NAME_NOT_UNIQUE": "This display name is already in use",
+  "INVALID_CREDENTIALS": "Invalid credentials",
+  "EMAIL_NOT_FOUND": "This email doesn't exist",
+  "WRONG_CODE": "Wrong Code"
+}
