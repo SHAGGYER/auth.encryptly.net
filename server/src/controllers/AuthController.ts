@@ -367,8 +367,9 @@ export const sendPasswordResetEmail = async (req, res) => {
     const mailService = myContainer.get<MailService>(TYPES.MailService);
     await mailService.sendMail({
       to: req.body.email,
-      subject: "Nyt Kodeord",
+      subject: "Password Reset",
       html,
+      appName: req.body.appName
     });
 
     res.sendStatus(200);

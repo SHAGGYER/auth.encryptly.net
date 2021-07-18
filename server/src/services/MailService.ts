@@ -8,10 +8,12 @@ export class MailService {
     to,
     subject,
     html,
+      appName
   }: {
     to: string;
     subject: string;
     html: string;
+    appName?: string
   }) {
     try {
       let transporter = nodemailer.createTransport({
@@ -26,7 +28,7 @@ export class MailService {
       });
 
       await transporter.sendMail({
-        from: `"Mikolaj.dk" <${process.env.MAIL_FROM}>`,
+        from: `"${appName ? appName : 'Encryptly'}" <${process.env.MAIL_FROM}>`,
         to,
         subject,
         html,

@@ -29,7 +29,7 @@ const MODE = {
 const ForgotPassword = ({ location }) => {
   const { t } = useTranslation(["auth", "errors"]);
   const { clientId } = queryString.parse(location.search);
-  const { redirect } = useContext(AppContext);
+  const { redirect, app } = useContext(AppContext);
   const [email, setEmail] = useState("");
   const [error, setError] = useState({});
   const [info, setInfo] = useState("");
@@ -51,6 +51,7 @@ const ForgotPassword = ({ location }) => {
     try {
       const data = {
         email,
+        appName: app.name
       };
 
       setLoading(true);
