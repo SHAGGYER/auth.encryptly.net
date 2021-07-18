@@ -23,17 +23,16 @@ import { IApp } from "./models/IApp";
 import { IUser } from "./models/IUser";
 import AutoLogin from "src/pages/AutoLogin";
 import {ISettings} from "src/models/ISettings";
+import AutoLogout from "src/pages/AutoLogout";
 
 function App({ location }) {
   const { i18n } = useTranslation();
   const {
     clientId,
     redirectUrl,
-      doLogout
   }: {
     clientId?: string;
     redirectUrl?: string;
-    doLogout?: boolean
   } = queryString.parse(location.search);
   const history = useHistory();
   const [user, setUser] = useState<IUser | undefined>(undefined);
@@ -92,10 +91,6 @@ function App({ location }) {
       localStorage.setItem("clientId", response.clientId);
       setApp(response);
 
-      if (doLogout) {
-        localStorage.removeItem("token");
-        window.location.href = response.url;
-      }
     } else {
       //TODO: Display error
     }
@@ -171,6 +166,10 @@ function App({ location }) {
 
         <Route path="/auth/autologin">
           <AutoLogin />
+        </Route>
+
+        <Route path="/auth/autologout">
+          <AutoLogout />
         </Route>
 
         <Route path="*">
