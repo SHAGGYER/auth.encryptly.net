@@ -84,7 +84,7 @@ export const register = async (req, res) => {
   const { email, firstName, lastName, password, displayName } = req.body.user;
 
   const user = new User({
-    email: email.trim(),
+    email: email.toLowerCase().trim(),
     firstName: firstName.trim(),
     lastName: lastName.trim(),
     password,
