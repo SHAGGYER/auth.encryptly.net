@@ -22,6 +22,7 @@ import { UserService } from "./services/UserService";
 import { IApp } from "./models/IApp";
 import { IUser } from "./models/IUser";
 import AutoLogin from "src/pages/AutoLogin";
+import {ISettings} from "src/models/ISettings";
 
 function App({ location }) {
   const { i18n } = useTranslation();
@@ -46,6 +47,7 @@ function App({ location }) {
     localStorage.getItem("language") || "en"
   );
   const [windowOpener] = useState(window.opener ?? null);
+  const [settings, setSettings] = useState<ISettings | undefined>(undefined)
 
   useEffect(() => {
     init();
@@ -75,6 +77,7 @@ function App({ location }) {
   const init = async () => {
     const { data } = await HttpClient().get("/api/auth/init");
     setUser(data.user);
+    setSettings(data.settings);
     changeLanguage(language);
     setInitiated(true);
   };
@@ -129,7 +132,8 @@ function App({ location }) {
         language,
         setLanguage,
         savedRedirectUrl,
-        windowOpener
+        windowOpener,
+        settings
       }}
     >
       <Switch>
