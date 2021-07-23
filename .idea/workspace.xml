@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e204436-48fe-4240-bedc-5028deead3c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/client/src/pages/AutoLogout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/AutoLogout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +32,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="C:\Users\mikoo\Desktop\htdocs\encryptly-auth\client\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -52,6 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1626604814970</updated>
       <workItem from="1626604816300" duration="6929000" />
+      <workItem from="1626999853970" duration="30000" />
     </task>
     <servers />
   </component>
